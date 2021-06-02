@@ -1,0 +1,33 @@
+.carousel{
+  width: 100%;
+  position: relative;
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      list-style: none;
+    }
+  }
+  .group-btn{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btn{
+    border: none;
+    color: white;
+    font-size: 3rem;
+    &:hover{
+      color: yellow;
+    }
+  }
+  .prev:hover{
+    transform: scale(1.09) translateX(-10px)
+  }
+  .next:hover{
+    transform: scale(1.09) translateX(10px)
+  }
+}
