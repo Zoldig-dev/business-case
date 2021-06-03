@@ -1,24 +1,22 @@
-.container {
-}
 .content {
   width: 100%;
   &-title {
     text-align: center;
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 3rem 0;
   }
   &-description {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5rem;
   }
   &-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 3rem 0;
   }
 }
 

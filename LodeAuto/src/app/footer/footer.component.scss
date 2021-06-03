@@ -1,13 +1,23 @@
 footer {
-  p {
-    font-size: 24px;
-  }
-  a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    :hover {
-      color: #1e2d7c;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+}
+.content {
+  width: 100%;
+  &-logo {
+    padding: 0.5rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    p {
+      color: #f9ca24;
     }
   }
 }
