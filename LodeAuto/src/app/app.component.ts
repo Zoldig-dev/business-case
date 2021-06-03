@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 export interface IDocuments {
   src: string;
   name: string;
@@ -8,6 +16,9 @@ export interface IDocuments {
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [
+    // animation triggers go here
+  ],
 })
 export class AppComponent {
   title = 'LodeAuto';

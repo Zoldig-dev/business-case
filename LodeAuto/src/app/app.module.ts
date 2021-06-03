@@ -10,6 +10,7 @@ import { FilterComponent } from './filter/filter.component';
 import { VListComponent } from './v-list/v-list.component';
 import { VCardComponent } from './v-card/v-card.component';
 import { SliderPromoComponent } from './slider-promo/slider-promo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { SliderPromoComponent } from './slider-promo/slider-promo.component';
     VCardComponent,
     SliderPromoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

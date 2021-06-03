@@ -2,8 +2,13 @@
   <div class="carousel">
     <ul>
       <li *ngFor="let slide of slides; let i = index">
-        <ng-container *ngIf="i===currentIndex">
-          <img [src]="slide.src" width="100%" height="auto" />
+        <ng-container *ngIf="i === currentIndex">
+          <img
+            [src]="slide.src"
+            width="100%"
+            height="auto"
+            @carouselAnimation
+          />
         </ng-container>
       </li>
     </ul>
