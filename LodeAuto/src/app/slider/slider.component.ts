@@ -10,7 +10,7 @@ import { IDocuments } from '../app.component';
     trigger('carouselAnimation', [
       transition('void =>*', [
         style({ opacity: 0 }),
-        animate('0.3s', style({ opacity: 1 })),
+        animate('2s', style({ opacity: 1 })),
       ]),
     ]),
   ],
