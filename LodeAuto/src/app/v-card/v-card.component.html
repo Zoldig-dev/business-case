@@ -1,17 +1,15 @@
 <div class="cards">
   <div class="cards-title">
-    <h2>Vroum Vroum</h2>
+    <h2>{{voiture.title}}</h2>
   </div>
-  <img src="assets/images/img1.jpg" alt="" class="cards-img" />
+  <img src="{{voiture.photos[0]}}" alt="" class="cards-img" />
   <div class="cards-info">
-    <p>Prix</p>
-    <p>Année</p>
+    <p>{{voiture.price}}</p>
+    <p>{{voiture.year}}</p>
   </div>
   <div class="cards-description">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-      dignissimos distinctio hic ullam, fuga molestias temporibus quam minus
-      voluptates totam ab, cupiditate iure aperiam repudiandae.
+      {{voiture.description | slice:0:150 }}...
     </p>
   </div>
   <button class="cards-btn">Voir l'annonce</button>

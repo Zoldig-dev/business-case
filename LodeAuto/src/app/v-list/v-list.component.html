@@ -5,16 +5,10 @@
         <h2>Notre sélection de véhicules d'occasion</h2>
       </div>
       <div class="content-description">
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
-        <app-v-card></app-v-card>
+        <app-v-card
+          *ngFor="let car of cars"
+          [voiture]="car"
+        ></app-v-card>
       </div>
       <div class="content-btn">
         <button class="btn-biens">VOIR PLUS D'ANNONCE</button>

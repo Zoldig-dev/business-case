@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { VListComponent } from './v-list/v-list.component';
 import { VCardComponent } from './v-card/v-card.component';
 import { SliderPromoComponent } from './slider-promo/slider-promo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     VCardComponent,
     SliderPromoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => localStorage.getItem('access_token'),
+        allowedDomains: ['localhost:8000'],
+      },
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

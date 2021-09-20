@@ -1,28 +1,26 @@
-.navbar {
+.navbarLol {
   min-height: 100px;
   background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    a {
-      text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &-btn {
+    border: none;
+    background-color: rgb(134, 134, 134);
+    color: #f9ca24;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    &:hover {
+      transform: scale(0.98);
     }
-    // &-img {
-    //   position: absolute;
-    //   top: 50%;
-    // }
-    &-title {
-      h1 {
-        text-decoration: none;
-        text-align: center;
-        color: #f9ca24;
-      }
+  }
+  a {
+    color: white;
+    &:hover {
+      text-decoration: none;
     }
   }
 }

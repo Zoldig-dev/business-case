@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Voiture} from "../models/voiture";
 
 @Component({
   selector: 'app-v-card',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./v-card.component.scss']
 })
 export class VCardComponent implements OnInit {
-
+  @Input() public voiture!: Voiture;
   constructor() { }
 
   ngOnInit(): void {

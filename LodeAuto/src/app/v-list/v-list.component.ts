@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import {ApiService} from "../services/api.service";
+import {Voiture} from "../models/voiture";
 
 @Component({
   selector: 'app-v-list',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./v-list.component.scss']
 })
 export class VListComponent implements OnInit {
-
-  constructor() { }
+  public cars: Voiture[] = [];
+  constructor(
+    private api: ApiService,
+  ) {
+    this.api.getVoiture().then((res) => {
+      this.cars = res;
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges() {
+    this.api.getVoiture().then(res => {
+      this.cars = res;
+    })
   }
 
 }
